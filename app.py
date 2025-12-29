@@ -92,10 +92,10 @@ def setup_rag_engine(selected_project_name):
 
             # 1. Read & Convert to Markdown
             md_text = pymupdf4llm.to_markdown(file_path)
-            if isinstance(raw_md_text, bytes):
-                md_text = raw_md_text.decode("utf-8")
+            if isinstance(md_text, bytes):
+                md_text = md_text.decode("utf-8")
             else:
-                md_text = raw_md_text.replace("\ufffd", "")
+                md_text = md_text.replace("\ufffd", "")
 
             # 2. Advanced Splitting
             headers_to_split_on = [("#", "H1"), ("##", "H2"), ("###", "H3")]
@@ -241,3 +241,4 @@ if prompt_text := st.chat_input("Ask a question about the project..."):
         except Exception as e:
 
             st.error(f"An error occurred: {e}")
+
