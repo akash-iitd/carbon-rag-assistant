@@ -6,8 +6,9 @@ langchain-google-genai
 langchain-huggingface
 langchain-chroma
 langchain-text-splitters
-pymupdf
+pymupdf-layout
 pymupdf4llm
 chromadb
 sentence-transformers
 rank_bm25
+
