@@ -5,7 +5,7 @@ import logging
 import shutil
 from dotenv import load_dotenv
 import streamlit as st
-import pymupdf.layout
+#import pymupdf.layout
 import pymupdf4llm
 
 # --- LangChain Imports ---
@@ -239,4 +239,5 @@ if prompt_text := st.chat_input("Ask a question about the project..."):
             st.session_state.messages.append({"role": "assistant", "content": response})
 
         except Exception as e:
+
             st.error(f"An error occurred: {e}")
